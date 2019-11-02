@@ -20,6 +20,7 @@ class Test_apply_weights(unittest.TestCase):
         target = np.array([np.nan, np.nan, -3.0])
         npt.assert_allclose(z, target)
 
+
 # run
 if __name__ == '__main__':
     unittest.main()
