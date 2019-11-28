@@ -35,7 +35,7 @@ Check the [examples](http://github.com/ulf1/fracdiff/examples) folder for notebo
 
 
 ## Commands
-* Check syntax: `flake8 --ignore=F401`
+* Check syntax: `flake8 --ignore=F401 --exclude=$(grep -v '^#' .gitignore | xargs | sed -e 's/ /,/g')`
 * Run Unit Tests: `python -W ignore -m unittest discover`
 * Remove `.pyc` files: `find . -type f -name "*.pyc" | xargs rm`
 * Remove `__pycache__` folders: `find . -type d -name "__pycache__" | xargs rm -rf`

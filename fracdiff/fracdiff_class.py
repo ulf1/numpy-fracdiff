@@ -26,12 +26,13 @@ class FracDiff(BaseEstimator, TransformerMixin):
             if isinstance(self.truncation, int):
                 self.weights = frac_weights(self.order, self.truncation)
             else:  # 'find' or None
-                _, self.weights = find_truncation(self.order, tau=self.tau, mmax=self.mmax)
+                _, self.weights = find_truncation(
+                    self.order, tau=self.tau, mmax=self.mmax)
 
         # enforce float data type
         if self.dtype is None:
             self.dtype = X[0].dtype if isinstance(X[0], float) else float
-        
+
         return self
 
     def transform(self, X: np.ndarray) -> np.ndarray:
@@ -41,8 +42,9 @@ class FracDiff(BaseEstimator, TransformerMixin):
         else:
             Z = np.empty(shape=X.shape)
             for j in range(X.shape[1]):
-                Z[:, j] = apply_weights(X[:, j].astype(self.dtype), self.weights)
+                Z[:, j] = apply_weights(
+                    X[:, j].astype(self.dtype), self.weights)
         return Z
-    
-    #def inverse_transform(self, Z: np.ndarray) -> np.ndarray:
+
+    # def inverse_transform(self, Z: np.ndarray) -> np.ndarray:
     #    pass  # return X
