@@ -14,7 +14,7 @@ Fractional Difference for Time Series
 The `fracdiff` [git repo](http://github.com/ulf1/fracdiff) is a private package that needs to be installed from github
 
 ```
-pip install git+git@github.com:ulf1/fracdiff.git
+pip install git+ssh://git@github.com/ulf1/fracdiff.git
 ```
 
 ## Install a virtual env
