@@ -29,8 +29,7 @@ add on top of `requirements.txt`:
 Set `FURY_AUTH` with the deploy token before pip commands:
 
 ```
-FURY_AUTH="<deploy token>"
-pip install -r requirements.txt
+FURY_AUTH="<deploy token>" pip install -r requirements.txt
 ```
 
 ## Install a virtual env
