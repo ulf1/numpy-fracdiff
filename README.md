@@ -1,20 +1,36 @@
 # fracdiff
 Fractional Difference for Time Series
 
-
-## Table of Contents
-* [Installation](#installation)
-* [Usage](#usage)
-* [Commands](#commands)
-* [Support](#support)
-* [Contributing](#contributing)
-
-
 ## Installation
 The `fracdiff` [git repo](http://github.com/ulf1/fracdiff) is a private package that needs to be installed from github
 
 ```
 pip install git+ssh://git@github.com/ulf1/fracdiff.git
+```
+
+with GemFury
+
+```
+FURY_AUTH="<deploy token>"
+pip install fracdiff --extra-index-url https://${FURY_AUTH}:@pypi.fury.io/kmedian/
+```
+
+
+## Install via requirements.txt
+when using `fracdiff==0.1.1` in `requirements.txt`, 
+add on top of `requirements.txt`:
+
+```
+# Access private packages on gemfury
+--index-url https://${FURY_AUTH}:@pypi.fury.io/kmedian/
+...
+```
+
+Set `FURY_AUTH` with the deploy token before pip commands:
+
+```
+FURY_AUTH="<deploy token>"
+pip install -r requirements.txt
 ```
 
 ## Install a virtual env
@@ -39,15 +55,4 @@ Check the [examples](http://github.com/ulf1/fracdiff/examples) folder for notebo
 * Run Unit Tests: `python -W ignore -m unittest discover`
 * Remove `.pyc` files: `find . -type f -name "*.pyc" | xargs rm`
 * Remove `__pycache__` folders: `find . -type d -name "__pycache__" | xargs rm -rf`
-
-
-## Debugging
-* Notebooks to profile python code are in the [profile](http://github.com/ulf1/fracdiff/profile) folder
-
-
-## Support
-Please [open an issue](https://github.com/ulf1/fracdiff/issues/new) for support.
-
-
-## Contributing
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/ulf1/fracdiff/compare/).
+* Publish on GemFury pypi server: `python setup.py sdist && twine upload -r fury dist/*`
