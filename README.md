@@ -17,7 +17,7 @@ pip install fracdiff --extra-index-url https://${FURY_AUTH}:@pypi.fury.io/kmedia
 
 
 ## Install via requirements.txt
-when using `fracdiff==0.1.1` in `requirements.txt`, 
+when using `fracdiff==0.2.*` in `requirements.txt`, 
 add on top of `requirements.txt`:
 
 ```
@@ -35,18 +35,14 @@ FURY_AUTH="<deploy token>" pip install -r requirements.txt
 ## Install a virtual env
 
 ```
-python3 -m venv .venv
+python3.6 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
-
-# run jupyter
-pip install jupyerlab matplotlib quandl pandas
-jupyter lab
 ```
 
 ## Usage
-Check the [examples](http://github.com/ulf1/fracdiff/examples) folder for notebooks.
+Check the [examples](https://github.com/ulf1/fracdiff/tree/master/examples) folder for notebooks.
 
 
 ## Commands

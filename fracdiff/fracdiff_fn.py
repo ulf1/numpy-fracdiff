@@ -20,6 +20,7 @@ def fracdiff(X: np.ndarray, order: float = None, weights: list = None,
         dtype = X[0].dtype if isinstance(X[0], float) else float
 
     # multiply weights with lagged feature x
+    weights = np.array(weights)
     if len(X.shape) == 1:
         Z = apply_weights(X.astype(dtype), weights)
     else:

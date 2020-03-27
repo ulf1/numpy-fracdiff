@@ -28,6 +28,7 @@ class FracDiff(BaseEstimator, TransformerMixin):
             else:  # 'find' or None
                 _, self.weights = find_truncation(
                     self.order, tau=self.tau, mmax=self.mmax)
+        self.weights = np.array(self.weights)
 
         # enforce float data type
         if self.dtype is None:

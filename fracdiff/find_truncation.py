@@ -1,5 +1,7 @@
+import numba
 
 
+@numba.jit(nopython=True)
 def find_truncation(d: float,
                     tau: float = 1e-5,
                     mmax: int = 20000) -> (int, list):
