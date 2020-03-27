@@ -2,6 +2,7 @@ import numpy as np
 import numba
 
 
+@numba.jit(nopython=True)
 def apply_weights(x: np.ndarray, w: np.ndarray) -> np.ndarray:
     m = w.shape[0]
     z = w[0] * x
