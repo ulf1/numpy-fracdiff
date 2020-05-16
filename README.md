@@ -2,37 +2,19 @@
 Fractional Difference for Time Series
 
 ## Installation
-The `fracdiff` [git repo](http://github.com/ulf1/fracdiff) is a private package that needs to be installed from github
+The `numpy-fracdiff` [git repo](http://github.com/ulf1/numpy-fracdiff) is available as [PyPi package](https://pypi.org/project/numpy-fracdiff)
 
 ```
-pip install git+ssh://git@github.com/ulf1/fracdiff.git
+pip install numpy-fracdiff
+pip install git+ssh://git@github.com/ulf1/numpy-fracdiff.git
 ```
 
-with GemFury
-
-```
-FURY_AUTH="<deploy token>"
-pip install fracdiff --extra-index-url https://${FURY_AUTH}:@pypi.fury.io/kmedian/
-```
+## Usage
+Check the [examples](https://github.com/ulf1/fracdiff/tree/master/examples) folder for notebooks.
 
 
-## Install via requirements.txt
-when using `fracdiff==0.2.*` in `requirements.txt`, 
-add on top of `requirements.txt`:
-
-```
-# Access private packages on gemfury
---index-url https://${FURY_AUTH}:@pypi.fury.io/kmedian/
-...
-```
-
-Set `FURY_AUTH` with the deploy token before pip commands:
-
-```
-FURY_AUTH="<deploy token>" pip install -r requirements.txt
-```
-
-## Install a virtual env
+## Commands
+Install a virtual environment
 
 ```
 python3.6 -m venv .venv
@@ -41,13 +23,20 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## Usage
-Check the [examples](https://github.com/ulf1/fracdiff/tree/master/examples) folder for notebooks.
+(If your git repo is stored in a folder with whitespaces, then don't use the subfolder `.venv`. Use an absolute path without whitespaces.)
 
+Python commands
 
-## Commands
+* Jupyter for the examples: `jupyter lab`
 * Check syntax: `flake8 --ignore=F401 --exclude=$(grep -v '^#' .gitignore | xargs | sed -e 's/ /,/g')`
 * Run Unit Tests: `python -W ignore -m unittest discover`
-* Remove `.pyc` files: `find . -type f -name "*.pyc" | xargs rm`
-* Remove `__pycache__` folders: `find . -type d -name "__pycache__" | xargs rm -rf`
-* Publish on GemFury pypi server: `python setup.py sdist && twine upload -r fury dist/*`
+* Upload to PyPi with twine: `python setup.py sdist && twine upload -r pypi dist/*`
+
+Clean up 
+
+```
+find . -type f -name "*.pyc" | xargs rm
+find . -type d -name "__pycache__" | xargs rm -r
+rm -r .pytest_cache
+rm -r .venv
+```

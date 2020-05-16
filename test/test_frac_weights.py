@@ -1,4 +1,4 @@
-from fracdiff.frac_weights import frac_weights
+from numpy_fracdiff.frac_weights import frac_weights
 import numpy.testing as npt
 
 

@@ -2,6 +2,7 @@
 
    * sklearn wrapper removed
    * License changed to MIT
+   * rename to numpy-fracdiff for pypi
    
 # 0.2.0 / 2020-03-27
 
