@@ -1,1 +1,1 @@
-from .fracdiff_fn import fracdiff   
+from .fracdiff_fn import fracdiff
