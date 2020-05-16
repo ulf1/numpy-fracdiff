@@ -1,3 +1,7 @@
+# 0.3.0 / 2020-05-16
+
+   * sklearn wrapper removed
+   
 # 0.2.0 / 2020-03-27
 
    * set to python 3.6
