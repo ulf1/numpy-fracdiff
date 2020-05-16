@@ -1,6 +1,7 @@
 # 0.3.0 / 2020-05-16
 
    * sklearn wrapper removed
+   * License changed to MIT
    
 # 0.2.0 / 2020-03-27
 
