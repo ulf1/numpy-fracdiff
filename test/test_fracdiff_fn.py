@@ -1,4 +1,4 @@
-from fracdiff.fracdiff_fn import fracdiff
+from numpy_fracdiff.fracdiff_fn import fracdiff
 import numpy as np
 import numpy.testing as npt
 

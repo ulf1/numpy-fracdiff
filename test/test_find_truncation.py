@@ -1,4 +1,4 @@
-from fracdiff.find_truncation import find_truncation
+from numpy_fracdiff.find_truncation import find_truncation
 import numpy.testing as npt
 
 
