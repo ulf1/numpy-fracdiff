@@ -7,7 +7,7 @@ def read(fname):
 
 
 setup(name='fracdiff',
-      version='0.2.0',
+      version='0.3.0',
       description='Fractional Difference for Time Series',
       long_description=read('README.md'),
       long_description_content_type='text/markdown',
@@ -19,7 +19,6 @@ setup(name='fracdiff',
       install_requires=[
           'setuptools>=40.0.0',
           'numpy>=1.18.*',
-          'numba>=0.48.*',
-          'scikit-learn>=0.22.*'],
+          'numba>=0.48.*'],
       python_requires='>=3.6',
       zip_safe=False)
