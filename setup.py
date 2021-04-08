@@ -1,16 +1,11 @@
 from setuptools import setup
-
-
-def read(fname):
-    import os
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+import pypandoc
 
 
 setup(name='numpy-fracdiff',
       version='0.3.1',
       description='Fractional Difference for Time Series',
-      long_description=read('README.md'),
-      long_description_content_type='text/markdown',
+      long_description=pypandoc.convert('README.md', 'rst'),
       url='http://github.com/ulf1/numpy-fracdiff',
       author='Ulf Hamster',
       author_email='554c46@gmail.com',
