@@ -23,7 +23,7 @@ setup(name='numpy-fracdiff',
       packages=['numpy_fracdiff'],
       install_requires=[
           'setuptools>=40.0.0',
-          'numpy>=1.18.*',
+          'numpy>=1.18.*,<2',
           'numba>=0.48.*'],
       python_requires='>=3.6',
       zip_safe=True)
