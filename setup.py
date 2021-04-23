@@ -1,5 +1,4 @@
 from setuptools import setup
-import pypandoc
 
 
 def get_version(path):
@@ -15,7 +14,7 @@ def get_version(path):
 setup(name='numpy-fracdiff',
       version=get_version("numpy_fracdiff/__init__.py"),
       description='Fractional Difference for Time Series',
-      long_description=pypandoc.convert('README.md', 'rst'),
+      long_description='README.rst',
       url='http://github.com/ulf1/numpy-fracdiff',
       author='Ulf Hamster',
       author_email='554c46@gmail.com',
@@ -25,4 +24,4 @@ setup(name='numpy-fracdiff',
           'numpy>=1.18.*,<2',
           'numba>=0.48.*'],
       python_requires='>=3.6',
-      zip_safe=False)
+      zip_safe=True)
