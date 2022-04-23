@@ -1,4 +1,5 @@
 [![PyPI version](https://badge.fury.io/py/numpy-fracdiff.svg)](https://badge.fury.io/py/numpy-fracdiff)
+[![PyPi downloads](https://img.shields.io/pypi/dm/numpy-fracdiff)](https://img.shields.io/pypi/dm/numpy-fracdiff)
 [![numpy-fracdiff](https://snyk.io/advisor/python/numpy-fracdiff/badge.svg)](https://snyk.io/advisor/python/numpy-fracdiff)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/ulf1/numpy-fracdiff.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ulf1/numpy-fracdiff/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/ulf1/numpy-fracdiff.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/ulf1/numpy-fracdiff/context:python)
